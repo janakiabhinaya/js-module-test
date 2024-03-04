@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="headpart">
+            <div id="rpstitle">
+                <ul class="ul1">
+                    <li>ROCK</li>
+                    <li>PAPER</li>
+                    <li>SCISSORS</li>
+                </ul>
+            </div>
+            <div class="scorecard">
+                <div class="computerscore">
+                    <div class="scoretitles">COMPUTER</div><div class="scoretitles">SCORE</div><div class="number">0</div>
+                </div>
+                <div class="userscore">
+                    <div class="scoretitles">YOUR</div><div class="scoretitles">SCORE</div><div class="number">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="gamearea">
+        <div class="gamecontainer">
+            <div class="gamep1">
+             <button class="rock" onclick="pickuserhand(this)"> <img src="icons8-fist-67 1.png"></button>
+             <div class="line1"></div>
+             <div class="line2"></div>
+             <div class="line3"></div>  
+             <button class="scissors" onclick="pickuserhand(this)"><img src="17911 1.png"></button>
+            </div> 
+            <div class="gamep2">
+                 <button class="paper" onclick="pickuserhand(this)"><img src="icons8-hand-64 1.png"></button></div> 
+             </div>
+        </div>
+    </div>
+        <div class="contest">
+           <div class="userhand">
+           <p>YOU PICKED</p>
+           <div class="userhandimagecontainer win-shadow" id="userhandimage">
+           </div>
+           </div>
+           <div class="decisionbox">
+            <div class="decision">
+                <text id="li1">YOU WIN</text>
+                <text id="li2">AGAINST PC</text>
+            </div>
+            <button class="playagain">PLAY AGAIN</button>
+           </div>
+           <div class="pchand">
+            <p>PC PICKED</p>
+            <div class="pchandimagecontainer win-shadow" id="pchandimage">
+            </div>
+           </div>
+           </div>
+    <div class="gamerule"><button id="rules">RULES</button> <button class="next">NEXT</button></div>
+    <div class="rulebox">
+        <button id="close">X</button>
+        <text>Game Rules</text>
+        <ul class="rileslist">
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

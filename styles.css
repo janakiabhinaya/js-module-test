@@ -1,0 +1,342 @@
+*{
+    border: 0;
+
+}
+body{
+    background-color: rgba(140, 196, 97, 1); 
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.headpart{
+    display: flex;
+    justify-content: space-between; 
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    width: 65%;
+    height: 25%;
+}
+.ul1{
+    list-style-type: none;
+    font-style: Roboto;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+#rpstitle{
+    height: 100%;
+    width: 40%;
+}
+.userscore,.computerscore{
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(37, 37, 37, 1);
+    width: 35%;
+    height: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.scorecard{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+}
+
+.scoretitles{
+    color:rgba(101, 101, 101, 1);
+    font-style: Roboto;
+    font-size: 15px;
+    font-weight: 600;
+}
+.number{
+    color:rgba(37, 37, 37, 1);
+    font-size: 68px;
+    font-family: Roboto;
+    font-weight: 700;
+}
+.gamearea{
+    width:100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+.gamecontainer{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+}
+ .line1{
+  position: absolute;
+  top: 55%;
+  left:37%;
+  transform: rotate(0deg); 
+  width: 300px;
+  height:15px;
+  background-color: rgba(0, 0, 0, 0.64);
+  z-index: -1;
+} 
+.line2{
+    position: absolute;
+  top: 70%;
+  left: 34%;
+  transform: rotate(-120deg);   
+  width: 250px; /* Adjust the length of the line */
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.64);
+  z-index: -1;
+}  
+.line3{
+    position: absolute;
+  top: 75%;
+  left: 45%;
+  transform: rotate(-60deg);   
+  width: 240px; /* Adjust the length of the line */
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.64);
+  z-index: -1; 
+} 
+.gamep1{
+    display: flex;
+    justify-content: space-between;
+}
+.gamep2{
+    display: flex;
+    justify-content: center;
+}
+.paper,.scissors,.rock{
+    cursor: pointer;
+    border-radius: 50%;
+    border: 16px solid rgba(255, 169, 67, 1);
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+.scissors{
+    border: 16px solid rgba(189, 0, 255, 1);
+}
+.rock{
+    border: 16px solid rgba(0, 116, 182, 1);
+}
+.gamerule{
+     display: flex;
+     justify-content: flex-end; 
+     gap: 10px;
+     
+}
+.next{
+    cursor: pointer;
+    display: none;
+    font-size: 15px;
+    font-style: Roboto;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+}
+.gamerule #rules{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    color:rgba(255, 255, 255, 1);
+    font-size: 15px;
+    font-weight: 400;
+    font-style: Roboto;
+    padding: 5px 15px 5px 15px;
+    letter-spacing: 1px; 
+}
+.rulebox{
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 325px;
+            width: 278px;
+            background-color: rgba(0, 68, 41, 1);
+            color: rgba(255, 255, 255, 1);
+            border: 5px solid rgba(255, 255, 255, 1);
+            border-radius: 13px;
+            position: fixed;
+            bottom:50px;
+            right:20px;
+        }
+        .rulebox.open {
+            opacity: 1;
+        } 
+        #close{
+            cursor: pointer;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-style: Dangrek;
+            font-size: 25px;
+            font-weight: 400;
+            background-color: rgba(255, 0, 0, 1);
+            color:rgba(255, 255, 255, 1);
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 1);
+        }
+        .rulebox text{
+            display: flex;
+            align-items: center; 
+            justify-content: center;   
+            padding-top: 7%; 
+            font-style: Roboto;
+            font-size: 29px;
+            font-weight: 500;
+        }
+        .rulebox ul{
+            font-style: Roboto;
+            font-size: 13px;
+            font-weight: 400;
+            list-style-type: square;
+        }
+         .rulebox ul li{
+              padding: 5%;     
+        } 
+        ul li::marker{
+            color: rgba(255, 214, 0, 1);
+        }
+        .contest{
+            display:none;
+            justify-content: space-around;
+            height: 300px;
+            width: 100%;
+            align-items: center;
+        }
+        
+        .userhand,.pchand{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            height: 90%;
+        } 
+        .userhand p{
+            color: rgba(255, 255, 255, 1);
+            font-size: 17px;
+            font-style: Roboto;
+            font-weight: 600;
+        }
+        .userhandimagecontainer{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+
+        }
+         .win-shadow{
+            box-shadow: 0 1px 62px 0px rgba(46, 154, 37, 0.8), 0 1px 62px 0px rgba(46, 154, 37, 0.8),  0 1px 62px 0px rgba(46, 154, 37, 0.8), 0 1px 62px 0px rgba(46, 154, 37, 0.8), 0 1px 62px 0px rgba(46, 154, 37, 0.8), 0 1px 62px 0px rgba(46, 154, 37, 0.8), 0 1px 62px 0px rgba(46, 154, 37, 0.8);
+            z-index: -1; 
+            border-radius: 50%; 
+        } 
+        
+    .pchandimagecontainer{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
+    .pchand p{
+        font-style: Roboto;
+        font-size: 17px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 1);
+    }
+    .decisionbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 170px;
+        justify-content: space-around;
+    }
+    .decision{
+        display: flex;
+        flex-direction: column;
+    }
+    #li1{
+        font-size: 36px;
+        font-weight: 800;
+        font-style: Roboto;
+        color: rgba(255, 255, 255, 1);
+        letter-spacing: 2px;  
+    }
+    #li2{
+        font-size: 22px;
+        font-style: Roboto;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 1);
+        letter-spacing: 2px;
+        display: flex;
+        justify-content: center;
+    }
+    .playagain{
+        cursor: pointer;
+        font-weight: 600;
+        font-style: Roboto;
+        font-size: 15px;
+        color: rgba(107, 107, 107, 1);
+        background-color: rgba(255, 255, 255, 1);
+        letter-spacing: 2px;
+        height: 44px;
+        width: 164px;
+        border-radius: 9px;
+        border: none;
+    }
+
+    .congrats{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+        width: 100%;
+    }
+    .hurraycontainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    .imgcontainer{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    #winnerlogo{
+        position: absolute;
+    }
+    #hurray{
+        font-style: Roboto;
+        font-size: 91px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        color: rgba(255, 255, 255, 1);
+
+    }
+    #winbox{
+        font-style: Roboto;
+        font-size: 41px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 1);
+        letter-spacing: 4px;
+    }
+    .playdiv{
+        display: flex; 
+        justify-content: center;
+    }
+    
+
